@@ -84,7 +84,7 @@ ORDER BY
 SELECT
 	a.first_name,
 	a.last_name,
-	count(fc.film_id) as "Appeared in films of A category"
+	count(fc.film_id) as "Appeared in films of Children category"
 FROM
 	actor a
 INNER JOIN film_actor fa ON a.actor_id = fa.actor_id
