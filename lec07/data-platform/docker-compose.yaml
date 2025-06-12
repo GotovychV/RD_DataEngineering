@@ -1,4 +1,16 @@
 services:
+  mailcatcher:
+    build:
+      context: ./fake_smtp_server
+    container_name: fake_smtp_server
+    restart: on-failure
+    image: haravich/fake-smtp-server
+    ports:
+      - "1080:1080"
+      - "1025:1025"
+    networks:
+      - data_network
+    
   postgres_analytics:
     build:
       context: ./postgres_analytics

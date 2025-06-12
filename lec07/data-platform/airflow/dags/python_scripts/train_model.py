@@ -117,8 +117,8 @@ def process_iris_data(**kwargs):
         
         CREATE TABLE IF NOT EXISTS ml_results.iris_feature_importance (
             id SERIAL PRIMARY KEY,
-            feature VARCHAR(100),
-            importance FLOAT,
+            Feature VARCHAR(100),
+            Importance FLOAT,
             run_timestamp TIMESTAMP
         );
         """)

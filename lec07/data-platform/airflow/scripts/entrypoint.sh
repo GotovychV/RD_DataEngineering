@@ -38,7 +38,7 @@ echo "Airflow PostgreSQL started"
 # echo "Analytics PostgreSQL started"
 
 # Install dbt packages if they don't exist
-if [ -f /opt/airflow/dags/dbt/packages.yml ] && [ ! -d /opt/airflow/dags/dbt/dbt_packages ]; then
+if [ -f /opt/airflow/dags/dbt/homework/packages.yml ] && [ ! -d /opt/airflow/dbt/dbt_packages ]; then
   echo "Installing dbt packages..."
   cd /opt/airflow/dags/dbt && dbt deps --profiles-dir /opt/airflow/dags/dbt
   echo "dbt packages installed successfully"
